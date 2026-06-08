@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoWaste Mapper - Solusi Monitoring TPS Real-Time</title>
+    <!-- Tailwind CSS CDN untuk Desain Cepat, Bersih, dan Responsif -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased scroll-smooth">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-emerald-600 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-map-location-dot text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-gray-900">GeoWaste <span class="text-emerald-600">Mapper</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#masalah" class="hover:text-emerald-600 transition">Masalah</a>
+                <a href="#solusi" class="hover:text-emerald-600 transition">Solusi & Alur</a>
+                <a href="#swot" class="hover:text-emerald-600 transition">Analisis SWOT</a>
+                <a href="#target" class="hover:text-emerald-600 transition">Target Pasar</a>
+                <a href="#empati" class="hover:text-emerald-600 transition">Peta Empati</a>
+            </div>
+            <a href="#kontak" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md shadow-emerald-600/20">Coba Demo</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Unique Value Proposition) -->
+    <header class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-emerald-50 via-white to-gray-50">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-4 py-1.5 rounded-full font-semibold uppercase tracking-wider mb-4">Smart Eco-Campus Solution</span>
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+                Pantau Kapasitas TPS <span class="text-emerald-600 underline decoration-wavy decoration-emerald-200">Secara Real-Time</span>, Cegah Overflow Sampah!
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Layanan Pemetaan & Monitoring TPS Berbasis GIS dan Sensor Ultrasonik. Membantu tata kelola pengangkutan sampah yang data-driven, efisien, dan ramah lingkungan di area kampus dan sekitarnya.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#solusi" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition shadow-lg shadow-emerald-600/25 flex items-center justify-center space-x-2">
+                    <span>Lihat Alur Teknis</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="#kontak" class="w-full sm:w-auto bg-white hover:bg-gray-100 text-gray-900 border border-gray-300 px-8 py-4 rounded-xl font-medium text-lg transition flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-envelope text-gray-500"></i>
+                    <span>Hubungi Kami</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <hr class="border-gray-200 my-0">
+
+    <!-- IDENTIFIKASI MASALAH (5W + 1H) -->
+    <section id="masalah" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Identifikasi Masalah</h2>
+                <p class="text-gray-600">Terjadinya penumpukan dan ketidakefisienan pengangkutan sampah di titik-titik krusial sekitar area kampus.</p>
+            </div>
+
+            <!-- 5W+1H Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">W1</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">What (Apa)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Sampah tidak terpilah dengan benar dan menumpuk di TPS/kantin. Dominan sampah organik sisa makanan dan plastik sekali pakai.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">W2</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Where (Dimana)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Kantin terpusat, TPS tiap gedung, dan pemukiman kos (Jl. Teknik Kimia, Jl. Raya ITS, Perumdos Blok U Sukolilo).</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">W3</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">When (Kapan)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Setiap hari, puncaknya jam makan siang (11.00-13.00) & akhir kuliah (16.00-18.00). Memburuk saat awal semester / event besar.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">W4</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Who (Siapa)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Mahasiswa (~21.000 orang), dosen, staf, pedagang kantin, penghuni kos Kel. Keputih & Sukolilo, serta petugas kebersihan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">W5</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Why (Mengapa)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Minim kesadaran pilah, sampah tercampur kembali saat diangkut truk, tidak ada insentif ekonomi, serta rendahnya frekuensi pengangkutan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">H</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">How (Bagaimana)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Sampah menumpuk tanpa dipilah, diangkut langsung ke TPA Benowo. Terjadi overflow berkala, bau menyengat, dan lindi mencemari tanah.</p>
+                </div>
+            </div>
+
+            <!-- Data & Fakta Pendukung -->
+            <div class="bg-emerald-950 text-emerald-100 rounded-3xl p-8 md:p-12 shadow-xl">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center space-x-2">
+                    <i class="fa-solid fa-chart-bar text-emerald-400"></i>
+                    <span>Data & Fakta Pendukung</span>
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="border-l-2 border-emerald-500 pl-4">
+                        <span class="block text-3xl font-black text-white">1.800 Ton</span>
+                        <span class="text-xs text-emerald-300">Sampah harian dikirim ke TPA Benowo (DLH Surabaya, 2024)</span>
+                    </div>
+                    <div class="border-l-2 border-emerald-500 pl-4">
+                        <span class="block text-3xl font-black text-white">1.200 Unit</span>
+                        <span class="text-xs text-emerald-300">Kebutuhan minimal bank sampah di Kota Surabaya saat ini</span>
+                    </div>
+                    <div class="border-l-2 border-emerald-500 pl-4">
+                        <span class="block text-3xl font-black text-white">0,004 m³</span>
+                        <span class="text-xs text-emerald-300">Timbulan sampah per orang/hari di Perumdos Blok U</span>
+                    </div>
+                    <div class="border-l-2 border-emerald-500 pl-4">
+                        <span class="block text-3xl font-black text-white">±4 m³</span>
+                        <span class="text-xs text-emerald-300">Sampah organik/hari di ITS, hanya jadi 90kg kompos</span>
+                    </div>
+                </div>
+                <blockquote class="mt-8 pt-6 border-t border-emerald-800 text-sm italic text-emerald-300">
+                    "Kelemahan Esensial: Sampah yang sudah dipilah mandiri di TPS Sukolilo seringkali bercampur kembali di truk pengangkut akibat ketiadaan monitoring jadwal dan rute terintegrasi." (Kompas.id, Mei 2025)
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUSI DAN ALUR TEKNIS -->
+    <section id="solusi" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Solusi Berbasis Teknologi IoT & GIS</h2>
+                <p class="text-gray-600">GeoWaste Mapper mengintegrasikan sensor murah dengan visualisasi data spasial untuk menghadirkan keputusan yang presisi.</p>
+            </div>
+
+            <!-- Tampilan 2 Gambar dari GitHub -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                <!-- Gambar 1: Deteksi Realtime -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Monitoring Real-Time</span>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Prototipe Sensor & Antarmuka Aplikasi</h3>
+                    <div class="bg-gray-100 rounded-2xl overflow-hidden mb-4 flex justify-center items-center p-4">
+                        <!-- Mengacu pada file image_a5293e.png -->
+                        <img src="image_a5293e.png" alt="Sistem Deteksi Tangki Sampah Real-Time" class="max-h-80 object-contain rounded-lg">
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Pemasangan sensor ultrasonik non-kontak bertenaga baterai di dalam tutup atas tong sampah. Data kapasitas dalam persentase (%) langsung dikirim secara nirkabel ke aplikasi mobile dan dashboard petugas.
+                    </p>
+                </div>
+
+                <!-- Gambar 2: Alur Teknis -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+                    <span class="inline-block bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Arsitektur Sistem</span>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Alur Pengiriman Data & Manajemen Operasional</h3>
+                    <div class="bg-gray-100 rounded-2xl overflow-hidden mb-4 flex justify-center items-center p-4">
+                        <!-- Mengacu pada file image_a528a6.jpg -->
+                        <img src="image_a528a6.jpg" alt="Alur Teknis Arsitektur GeoWaste Mapper" class="max-h-80 object-contain rounded-lg">
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Data dari *Smart Bin* dikirim via internet menuju server pusat yang dilengkapi algoritma optimasi dan AI. Hasilnya diteruskan ke *Operation Center* untuk visualisasi rute pengangkutan dinamis bagi armada pengumpul (*End User*).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fitur Utama Utama -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-emerald-600 text-2xl mb-3"><i class="fa-solid fa-microchip"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Sensor Kapasitas Ekonomis</h4>
+                    <p class="text-sm text-gray-600">Menggunakan perangkat keras murah (~Rp50.000 - Rp100.000) dengan casing berating IP67 tahan lindi dan air.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-emerald-600 text-2xl mb-3"><i class="fa-solid fa-route"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Smart Routing & GIS</h4>
+                    <p class="text-sm text-gray-600">Pemetaan spasial real-time yang memandu truk pengangkut hanya menuju TPS yang sudah penuh guna menghemat BBM.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-emerald-600 text-2xl mb-3"><i class="fa-solid fa-award"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Papan Skor Hijau</h4>
+                    <p class="text-sm text-gray-600">Gamifikasi data untuk mendorong kompetisi pemilahan sampah antar departemen atau asrama di lingkungan kampus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANALISIS SWOT -->
+    <section id="swot" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Analisis SWOT & Strategi Keberlanjutan</h2>
+                <p class="text-gray-600">Evaluasi parameter internal dan eksternal secara komprehensif untuk memitigasi risiko operasional.</p>
+            </div>
+
+            <!-- SWOT Matrix Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Kekuatan -->
+                <div class="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
+                    <h3 class="text-lg font-bold text-emerald-900 mb-4 flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                        <span>Strengths (Kekuatan Internal)</span>
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-emerald-800 list-disc list-inside">
+                        <li>Monitoring berbasis IoT & GIS menyajikan data langsung (real-time).</li>
+                        <li>Biaya instalasi alat sangat terjangkau bagi instansi.</li>
+                        <li>Meningkatkan efisiensi pengangkutan (berdasarkan volume aktual).</li>
+                        <li>Selaras dan mendukung target ITS Smart Eco Campus.</li>
+                    </ul>
+                </div>
+                <!-- Kelemahan -->
+                <div class="bg-rose-50/50 p-6 rounded-2xl border border-rose-100">
+                    <h3 class="text-lg font-bold text-rose-900 mb-4 flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-xmark text-rose-600"></i>
+                        <span>Weaknesses (Kelemahan Internal)</span>
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-rose-800 list-disc list-inside">
+                        <li>Fokus pada monitoring teknis, belum menyelesaikan problem sistemik.</li>
+                        <li>Masih bergantung pada komitmen pihak ketiga (truk pengangkut).</li>
+                        <li>Tidak secara instan mengubah perilaku pemilahan di masyarakat.</li>
+                        <li>Risiko akurasi sensor menurun akibat kotoran atau air sampah (lindi).</li>
+                    </ul>
+                </div>
+                <!-- Peluang -->
+                <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-4 flex items-center space-x-2">
+                        <i class="fa-solid fa-chart-line text-blue-600"></i>
+                        <span>Opportunities (Peluang Eksternal)</span>
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-blue-800 list-disc list-inside">
+                        <li>Tren global adopsi Smart City & digitalisasi tata kota.</li>
+                        <li>Pasar luas dan sangat scalable (perumahan, pasar, area komersial).</li>
+                        <li>Integrasi kecerdasan buatan (AI) untuk prediksi penumpukan sampah.</li>
+                        <li>Akses pendanaan startup hijau berbasis ESG yang luas.</li>
+                    </ul>
+                </div>
+                <!-- Ancaman -->
+                <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100">
+                    <h3 class="text-lg font-bold text-amber-900 mb-4 flex items-center space-x-2">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
+                        <span>Threats (Ancaman Eksternal)</span>
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-amber-800 list-disc list-inside">
+                        <li>Rendahnya tingkat kesadaran awal warga untuk memilah.</li>
+                        <li>Munculnya kompetitor teknologi serupa dengan pendanaan masif.</li>
+                        <li>Ketergantungan penuh pada regulasi atau kebijakan pengelola wilayah.</li>
+                        <li>Risiko vandalisme fisik atau perusakan alat sensor di lapangan.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Taktik Mitigasi Risiko -->
+            <div class="bg-gray-900 text-white rounded-2xl p-6 md:p-8">
+                <h4 class="font-bold text-lg mb-4 text-emerald-400">Bagaimana Kami Mengatasi Kelemahan & Ancaman?</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <h5 class="font-semibold text-white mb-1">1. Solusi Rute Pintar (Smart Routing)</h5>
+                        <p class="text-gray-400">Menggunakan visualisasi GIS untuk membuktikan penghematan BBM operasional armada agar pengelola termotivasi memisahkan pengangkutan sampah.</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-white mb-1">2. Sensor Non-Kontak & Proteksi IP67</h5>
+                        <p class="text-gray-400">Desain tangguh dengan casing kedap air mencegah kerusakan perangkat dari cairan lindi korosif.</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-white mb-1">3. Integrasi Gamifikasi Kompetisi</h5>
+                        <p class="text-gray-400">Mendorong kesadaran masyarakat melalui transparansi data kuantitatif berupa penghargaan real-time antar sektor binaan.</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-white mb-1">4. Penempatan Tersembunyi Anti-Vandalisme</h5>
+                        <p class="text-gray-400">Sensor dipasang tersembunyi di rongga dalam tutup atas tong sampah dan dilengkapi label digital tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARGET MARKET & PERSONA BOARD -->
+    <section id="target" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Persona Target Pasar</h2>
+                <p class="text-gray-600">Memahami profil, kebutuhan utama, serta titik frustrasi dari para pemangku kepentingan di lapangan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Persona Laki-Laki -->
+                <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 md:p-8">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-2xl font-bold">R</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Roni (48 Tahun)</h3>
+                            <p class="text-xs text-gray-500">Koordinator Pengelolaan Lingkungan Kampus ITS</p>
+                        </div>
+                    </div>
+                    <p class="text-sm italic text-gray-600 bg-gray-50 p-4 rounded-xl mb-6">
+                        "Saya butuh data, bukan laporan asumsi supaya tim saya tahu kapan harus mengambil sampah, bukan menunggu komplain."
+                    </p>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">🎯 Tujuan Utama:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Mencegah overflow TPS sebelum ada keluhan masuk.</li>
+                                <li>Mengoptimalkan rute dan menekan biaya operasional.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">⚠️ Frustrasi:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Jadwal angkut manual & tidak ada notifikasi real-time.</li>
+                                <li>Sampah terpilah tercampur kembali di truk.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Persona Perempuan -->
+                <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 md:p-8">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-2xl font-bold">M</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Maya (39 Tahun)</h3>
+                            <p class="text-xs text-gray-500">Ketua Bank Sampah Kelurahan Keputih</p>
+                        </div>
+                    </div>
+                    <p class="text-sm italic text-gray-600 bg-gray-50 p-4 rounded-xl mb-6">
+                        "Warga sudah mau pilah sampah, tapi kalau truknya datang seenaknya dan campur semua, buat apa susah-susah pilah?"
+                    </p>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">🎯 Tujuan Utama:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Memastikan hasil pilahan diproses terpisah dengan benar.</li>
+                                <li>Meningkatkan nilai ekonomi daur ulang kas warga.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">⚠️ Frustrasi:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Ketiadaan transparansi jadwal penjemputan dinas.</li>
+                                <li>TPS overflow merusak keindahan lingkungan perumahan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-400 mt-6">Sumber framework diadaptasi dari Nielsen Norman Group & Xtensio User Persona template.</p>
+        </div>
+    </section>
+
+    <!-- EMPATHY MAP -->
+    <section id="empati" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Empathy Map (Pak Yun)</h2>
+                <p class="text-gray-600">Sudut pandang riil dari wawancara dengan petugas lapangan yang mengabdi selama ±20 tahun di area kerja.</p>
+            </div>
+
+            <!-- 4 Kuadran Empathy Map -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border border-gray-100 p-4 rounded-3xl bg-gray-50/50">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-3 text-emerald-700 flex items-center space-x-2">
+                        <i class="fa-solid fa-brain"></i> <span>Think & Feel</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Merasa puas dan senang jika lingkungan bersih dari sampah. Memiliki kecemasan mendalam terkait keterbatasan sarana pengolahan limbah dedaunan organik yang bervolume tinggi di area pepohonan kampus.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-3 text-emerald-700 flex items-center space-x-2">
+                        <i class="fa-solid fa-eye"></i> <span>See</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Melihat bahwa sebagian mahasiswa mulai sadar, namun masih ada kelompok oknum yang membuang sampah sembarangan serta mengabaikan kebersihan fasilitas toilet umum pasca penggunaan.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-3 text-emerald-700 flex items-center space-x-2">
+                        <i class="fa-solid fa-ear-listen"></i> <span>Hear</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Menerima teguran/keluhan dari jajaran dosen jika koridor terlihat kotor. Mendengar keluhan sesama rekan kebersihan saat beban kerja melonjak dua kali lipat akibat gelaran acara besar universitas.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-3 text-emerald-700 flex items-center space-x-2">
+                        <i class="fa-solid fa-comments"></i> <span>Say & Do</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Secara langsung dan spontan menegur mahasiswa demi menjaga ketertiban. Menjalankan rutinitas pembersihan area kerja harian sesuai instruksi kerja serta berinisiatif menjaga kebersihan secara swadaya.</p>
+                </div>
+            </div>
+
+            <!-- Pain & Gain Finisher -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="bg-rose-50 border border-rose-100 p-6 rounded-2xl">
+                    <h4 class="font-bold text-rose-900 mb-2 flex items-center space-x-2">
+                        <i class="fa-solid fa-bolt"></i> <span>Pains (Tantangan)</span>
+                    </h4>
+                    <p class="text-xs text-rose-800 leading-relaxed">Keterbatasan sarana pengomposan mandiri, intensitas pengangkutan truk eksternal yang jarang, dan besarnya tekanan pimpinan operasional saat momentum wisuda.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-100 p-6 rounded-2xl">
+                    <h4 class="font-bold text-emerald-900 mb-2 flex items-center space-x-2">
+                        <i class="fa-solid fa-star"></i> <span>Gains (Harapan)</span>
+                    </h4>
+                    <p class="text-xs text-emerald-800 leading-relaxed">Pekerjaan harian selesai tepat waktu tanpa catatan komplain dari atasan, suasana lingkungan kerja aman, amanah, dan didukung fasilitas pemantauan yang andal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION & KONTAK -->
+    <section id="kontak" class="py-20 bg-emerald-900 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-6">Siap Mewujudkan Kampus Bebas Sampah Meluber?</h2>
+            <p class="text-emerald-200 text-lg mb-10 max-w-2xl mx-auto">
+                Dukung implementasi **GeoWaste Mapper** untuk mewujudkan manajemen pengelolaan lingkungan berbasis data digital yang terintegrasi.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:dwicky@example.com" class="w-full sm:w-auto bg-white hover:bg-emerald-50 text-emerald-900 font-bold px-8 py-4 rounded-xl transition shadow-xl text-lg">
+                    Minta Demo Integrasi
+                </a>
+                <a href="https://github.com" target="_blank" class="w-full sm:w-auto bg-emerald-800 hover:bg-emerald-700 text-white font-medium px-8 py-4 rounded-xl transition border border-emerald-700 text-lg">
+                    <i class="fa-brands fa-github mr-2"></i>Lihat Repositori
+                </a>
+            </div>
+        </div>
+        <!-- Dekorasi Background -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-800 rounded-full opacity-30 blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-700 rounded-full opacity-30 blur-3xl"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-500 py-12 text-sm border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <p class="font-bold text-gray-300">Tim Pengembang GeoWaste Mapper</p>
+                <p class="text-xs mt-1 text-gray-500">Teknik Geofisika • Teknik Lingkungan • Teknik Mesin — Institut Teknologi Sepuluh Nopember</p>
+            </div>
+            <div class="text-center md:text-right text-xs">
+                <p>&copy; 2026 GeoWaste Mapper. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
+                <p class="mt-1">Dibuat menggunakan komponen Tailwind CSS Terbuka.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
